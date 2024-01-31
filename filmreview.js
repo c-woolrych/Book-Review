@@ -1,7 +1,12 @@
 
 console.log('js is loaded');
 
-
+function showRatingModal() {
+    console.log("showRatingModal called");
+    $('#watchedMovieModal').modal('hide'); // Hide the first modal debug needed
+    $('#ratingModal').modal('show'); // Show the rating modal debug needed
+  }
+  
 document.addEventListener('DOMContentLoaded', () => {
     const searchButton = document.getElementById('searchButton');
     const searchInput = document.getElementById('searchInput');
@@ -78,12 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         $('#watchedMovieModal').modal('show'); // Use this to show the modal
     }
 
-    function showRatingModal() {
-        $('#watchedMovieModal').modal('hide'); // Hide the first modal debug needed
-        $('#ratingModal').modal('show'); // Show the rating modal debug needed
-      }
-      
-  
+
     function addToSearchHistory(searchTerm) {
       if (!searchHistory.includes(searchTerm)) {
         searchHistory.unshift(searchTerm); // Adds to the start of the history
