@@ -1,0 +1,113 @@
+body {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* jumbotron */
+.jumbotron {
+  background-image: url('./Images/pic04.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 150px 20px;
+}
+
+.jumbotron p {
+  font-size: 24px;
+  color: black;
+}
+
+.jumbotron h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+}
+
+/* buttons */ 
+
+.container.my-5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row.mb-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col-6 {
+  padding: 0;
+}
+
+#searchInput {
+  width: 100%;
+}
+
+#searchButton:hover {
+  background-color: #343a40;
+  color: white;
+}
+
+#searchButton { 
+  width: auto;
+  align-self: center;
+  color: #343a40;
+  background: white;
+  transition: ease-in-out 0.3s;
+}
+
+/* Search Section Styles */
+.container {
+  margin-top: 20px;
+}
+
+/* Card Styles */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Search History Styles */
+#searchHistory {
+  margin-top: 10px;
+}
+
+/* Movie Trailer Styles */
+#playerContainer {
+  margin-top: 20px;
+}
+
+/* Modals Styles */
+.modal-header {
+  background-color: #343a40;
+  color: white;
+}
+
+.modal-footer {
+  background-color: #f8f9fa;
+}
+
+/* Emoji Ratings Styles */
+.emoji-ratings {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+  .col-6 {
+    padding: 0;
+  }
+
+  .btn-outline-secondary {
+    margin-top: 10px;
+  }
+
+  #searchHistory {
+    margin-top: 20px;
+  }
+}
