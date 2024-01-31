@@ -3,8 +3,8 @@ console.log('js is loaded');
 
 function showRatingModal() {
     console.log("showRatingModal called");
-    $('#watchedMovieModal').modal('hide'); // Hide the first modal debug needed
-    $('#ratingModal').modal('show'); // Show the rating modal debug needed
+    $('#watchedMovieModal').modal('hide'); // Hide the first modal fixed
+    $('#ratingModal').modal('show'); // Show the rating modal dfixed and animated
   }
   
 document.addEventListener('DOMContentLoaded', () => {
@@ -12,6 +12,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('searchInput');
     const searchHistoryContainer = document.getElementById('searchHistory');
     let searchHistory = [];
+
+    document.querySelectorAll('.emoji-ratings button').forEach(button => {
+        button.addEventListener('click', event => {
+          for (let i = 0; i < 15; i++) { // Create 15 emoji elements
+            const emojiElem = document.createElement('div');
+            emojiElem.textContent = event.target.textContent; // Get emoji character
+            emojiElem.classList.add('emoji-animation');
+  
+            // Get button position
+            const rect = event.target.getBoundingClientRect();
+            emojiElem.style.position = 'absolute';
+            emojiElem.style.left = `${rect.left + (Math.random() * 20 - 10)}px`; // Randomize starting position
+            emojiElem.style.top = `${rect.top + (Math.random() * 20 - 10)}px`;
+  
+            document.body.appendChild(emojiElem); // Append to body for absolute positioning
+  
+            // Randomize animation delay
+            emojiElem.style.animationDelay = `${Math.random() * 0.5}s`;
+  
+            emojiElem.addEventListener('animationend', () => {
+              emojiElem.remove(); // Remove after animation
+            });
+          }
+        });
+      });
+  
   
     searchButton.addEventListener('click', function() {
       const searchTerm = searchInput.value.trim();
@@ -30,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
           .then(data => {
             if (data.Response === "True") {
               displayMovieData(data); 
-              displayMovieTrailer(data.Title); // Call to display the movie trailer
+              displayMovieTrailer(data.Title); 
             } else {
               console.log('Movie not found'); // Consider implementing user-friendly feedback
               // Optionally clear previous movie details and trailers here
