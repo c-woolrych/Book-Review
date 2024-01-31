@@ -1,0 +1,10 @@
+
+
+@keyframes throwAndSlide {
+    0% { transform: translate(0, 0) scale(1); opacity: 1; }
+    100% { transform: translate(0, -100vh) scale(0); opacity: 0; } /* Moving up and fading out */
+  }
+  
+  .emoji-animation {
+    animation: throwAndSlide 6s ease-out forwards; 
+  }
