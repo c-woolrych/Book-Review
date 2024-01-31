@@ -1,5 +1,5 @@
 
-// console.log('js is loaded');
+console.log('js is loaded');
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,19 +17,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
     function fetchMovieData(searchTerm) {
-        const apiKey = '95f5c072';
+        const apiKey = '95f5c072'; 
         const url = `https://www.omdbapi.com/?apikey=${apiKey}&t=${encodeURIComponent(searchTerm)}`;
     
         fetch(url)
           .then(response => response.json())
           .then(data => {
             if (data.Response === "True") {
-              displayMovieData(data); // Now passing the detailed movie data
-
+              displayMovieData(data); 
               displayMovieTrailer(data.Title); // Call to display the movie trailer
             } else {
-              console.log('Movie not found'); 
-            // user-friendly feedback?
+              console.log('Movie not found'); // Consider implementing user-friendly feedback
               // Optionally clear previous movie details and trailers here
             }
           })
@@ -38,25 +36,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displayMovieTrailer(movieTitle) {
-        const apiKey = 'AIzaSyAISHTcHoTAJNoeJqWcaWL9Mskp_OTidDU'; 
-        const searchQuery = `${movieTitle} trailer`; 
+        const apiKey = 'AIzaSyAISHTcHoTAJNoeJqWcaWL9Mskp_OTidDU'; // Replace with your actual YouTube API key
+        const searchQuery = `${movieTitle} trailer`;
         const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(searchQuery)}&maxResults=1&key=${apiKey}`;
-      
+    
         fetch(url)
           .then(response => response.json())
           .then(data => {
-            if (data.items.length > 0) {
-              const videoId = data.items[0].id.videoId;
-              embedYoutubeVideo(videoId);
-            } else {
-              console.log('Trailer not found');
-            }
+              console.log(data); // Add this line to see what the YouTube API returns
+              if (data.items.length > 0) {
+                  const videoId = data.items[0].id.videoId;
+                  embedYoutubeVideo(videoId);
+              } else {
+                  console.log('Trailer not found');
+              }
           })
           .catch(error => console.error('Error fetching YouTube data:', error));
-
-      }
-
-
+    }
 
       
       function embedYoutubeVideo(videoId) {
@@ -66,8 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
       function displayMovieData(movie) {
-
-        
+        // Assuming 'movie' is the object containing all the movie details from the OMDb API
         document.querySelector('.card-img-top').src = movie.Poster || 'search-image.jpg'; // Fallback image if Poster is not available
         document.querySelector('.card-title').textContent = movie.Title || 'Title Unavailable';
         document.getElementById('releaseYear').textContent = movie.Released || 'Release Date Unavailable';
@@ -84,8 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showRatingModal() {
-        $('#watchedMovieModal').modal('hide'); // Hide the first modal
-        $('#ratingModal').modal('show'); // Show the rating modal
+        $('#watchedMovieModal').modal('hide'); // Hide the first modal debug needed
+        $('#ratingModal').modal('show'); // Show the rating modal debug needed
       }
       
   
