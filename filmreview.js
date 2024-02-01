@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchButton = document.getElementById('searchButton');
     const searchInput = document.getElementById('searchInput');
     const searchHistoryContainer = document.getElementById('searchHistory');
-    let searchHistory = [];
+    let searchHistory = JSON.parse(localStorage.getItem('history')).slice(0, 5) || []; 
 
     document.querySelectorAll('.emoji-ratings button').forEach(button => {
         button.addEventListener('click', event => {
@@ -42,9 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
     searchButton.addEventListener('click', function() {
       const searchTerm = searchInput.value.trim();
       if (searchTerm) {
-        fetchMovieData(searchTerm);
         addToSearchHistory(searchTerm);
+        fetchMovieData(searchTerm);
       }
+      searchHistory.push(searchTerm); // push search term to search history array
+      localStorage.setItem('history', JSON.stringify(searchHistory)); //add array to local storage with stringify
+      console.log(history);
     });
   
     function fetchMovieData(searchTerm) {
@@ -123,5 +126,12 @@ document.addEventListener('DOMContentLoaded', () => {
         .map(term => `<li class="list-group-item list-group-item-action" onclick="fetchMovieData('${term}')">${term}</li>`)
         .join('');
     }
+    updateSearchHistoryUI();
+
+    // fetch data when history item clicked
+    $('.list-group-item').on('click', function(event) {
+      var searchTerm = event.target.textContent;
+      fetchMovieData(searchTerm);
+    });
   });
   
