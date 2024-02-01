@@ -127,5 +127,11 @@ document.addEventListener('DOMContentLoaded', () => {
         .join('');
     }
     updateSearchHistoryUI();
+
+    // fetch data when history item clicked
+    $('.list-group-item').on('click', function(event) {
+      var searchTerm = event.target.textContent;
+      fetchMovieData(searchTerm);
+    });
   });
   
