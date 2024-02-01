@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Assuming 'movie' is the object containing all the movie details from the OMDb API
         document.querySelector('.card-img-top').src = movie.Poster || 'search-image.jpg'; // Fallback image if Poster is not available
         document.querySelector('.card-title').textContent = movie.Title || 'Title Unavailable';
+        document.querySelector('#rating').textContent = movie.Rated || 'Rating Unavailable'; 
         document.getElementById('releaseYear').textContent = movie.Released || 'Release Date Unavailable';
         document.getElementById('runTime').textContent = movie.Runtime || 'Runtime Unavailable';
         document.getElementById('genre').textContent = movie.Genre || 'Genre Unavailable';
