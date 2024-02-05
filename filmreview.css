@@ -3,7 +3,6 @@
 :root {
   --dark-color: rgb(16, 16, 16);
   --light-color: rgb(192, 192, 192);
-  --red-color: rgb(155, 20, 20);
   --popcorn-color: rgb(255, 184, 4);
   --popcorn-light-color: rgba(249, 191, 44, 0.8);
 }
@@ -145,6 +144,7 @@ button:hover {
   background-color: var(--dark-color);
   color: white;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .movie-info-section h2, 
@@ -180,6 +180,7 @@ margin-top: 20px;
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
+  margin-bottom: 20px;
 }
 
 #clear-storage-btn:hover {
