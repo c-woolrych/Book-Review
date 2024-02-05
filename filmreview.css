@@ -59,7 +59,7 @@ body {
 
 .search-control {
   width: 50%;
-  height: 35px;
+  height: 40px;
   box-shadow: 0.1em 0.1em 0.1em rgba(16, 16, 16, 0.1);
   background-color: var(--dark-color);
   border-radius: 5px;
@@ -125,6 +125,22 @@ button:hover {
   padding: 20px;
 }
 
+#movie-trailer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.movie-trailer-box {
+  width: 300px;
+  height: 300px;
+  background-color: var(--dark-color);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
 .movie-info-section {
   background-color: var(--dark-color);
   color: white;
@@ -145,22 +161,25 @@ margin-top: 20px;
   #searchHistory {
     background-color: var(--dark-color);
     color: white;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid var(--popcorn-color);
     border-radius: 5px;
-    margin-top: 20px;
+    margin: 20px auto;
+    max-width: 600px;
   }
 
 #searchHistory li {
   list-style-type: none;
-  padding: 5px;
+  padding: 10px;
   border-bottom: 1px solid var(--popcorn-color);
 }
 
 #clear-storage-btn {
   background-color: var(--dark-color);
   color: white;
-  margin-top: 10px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
 }
 
 #clear-storage-btn:hover {
