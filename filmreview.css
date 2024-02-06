@@ -211,6 +211,26 @@ margin-top: 20px;
   text-decoration: none;
 }
 
+
+/*Icons Modals*/
+#ratingModal .btn-light .bi {
+  color: var(--popcorn-color);
+}
+
+/* thumbs up and thumbs down buttons in the modal */
+#thumbsUp, #thumbsDown {
+  border-color: var(--popcorn-color);
+
+}
+
+#thumbsUp:hover, #thumbsDown:hover {
+  background-color: var(--dark-color); 
+  color: var(--popcorn-color);
+}
+
+
+
+
 /* MEDIA QUERIES */
 
 /* Mobile */
