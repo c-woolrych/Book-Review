@@ -185,21 +185,30 @@ margin-top: 20px;
 }
 
 #clear-storage-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--dark-color);
   color: white;
   margin-top: 20px;
+  margin-left: 0;
   padding: 10px 20px;
   font-size: 16px;
   margin-bottom: 20px;
-  width: 40%;
+  max-width: 100%;
   box-sizing: border-box;
   transition: background-color 0.3s;
   border: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 #clear-storage-btn:hover {
   background-color: var(--popcorn-color);
   color: black;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 /* MEDIA QUERIES */
@@ -287,8 +296,9 @@ margin-top: 20px;
 }
 
 /* Desktop */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (min-width: 769px) {
   #clear-storage-btn {
+    width: auto;
     font-size: 18px;
     padding: 12px 24px;
 }
