@@ -3,7 +3,6 @@
 :root {
   --dark-color: rgb(16, 16, 16);
   --light-color: rgb(192, 192, 192);
-  --red-color: rgb(155, 20, 20);
   --popcorn-color: rgb(255, 184, 4);
   --popcorn-light-color: rgba(249, 191, 44, 0.8);
 }
@@ -21,6 +20,7 @@ div.logo-container {
 
 body {
   font-family: 'Heebo', sans-serif;
+  background-image: url(./assets/Images/pexels-pixabay-60507.jpg)
 }
 
 
@@ -31,11 +31,11 @@ body {
 }
 
 .search-container {
-  background-color: grey;
   height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgb(88, 88, 88);
 }
 
 .logo {
@@ -58,7 +58,7 @@ body {
 
 .search-control {
   width: 50%;
-  height: 35px;
+  height: 40px;
   box-shadow: 0.1em 0.1em 0.1em rgba(16, 16, 16, 0.1);
   background-color: var(--dark-color);
   border-radius: 5px;
@@ -116,6 +116,92 @@ button {
 
 button:hover {
   background-color: var(--popcorn-color);
+}
+
+#movie-trailer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 20px;
+}
+
+#movie-trailer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.movie-trailer-box {
+  width: 80%;
+  height: auto;
+  background-color: var(--dark-color);
+  color: white;
+  padding: 20px;
+  margin: 20px auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.movie-info-section {
+  background-color: var(--dark-color);
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.movie-info-section h2, 
+.movie-info-section h5 {
+color: var(--popcorn-color);
+margin-top: 20px;
+}
+
+.movie-info-section p {
+  color: white;
+}
+
+/* search history style */
+
+.search-history-card {
+  width: 80%;
+  min-width: 500px;
+  min-height: 500px;
+  height: auto;
+  box-sizing: border-box;
+  margin: 20px auto;
+}
+
+  #searchHistory {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 20px;
+    border: 1px solid var(--popcorn-color);
+    border-radius: 5px;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+#searchHistory li {
+  list-style-type: none;
+  padding: 10px;
+  border-bottom: 1px solid var(--popcorn-color);
+}
+
+#clear-storage-btn {
+  background-color: var(--dark-color);
+  color: white;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  width: 40%;
+  box-sizing: border-box;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+#clear-storage-btn:hover {
+  background-color: var(--popcorn-color);
+  color: black;
 }
 
 
