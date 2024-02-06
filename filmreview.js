@@ -94,7 +94,38 @@ function embedYoutubeVideo(videoId) {
       document.getElementById('director').textContent = movie.Director || 'Director Unavailable';
       document.getElementById('actors').textContent = movie.Actors || 'Actors Unavailable';
       // we can add any additional movie details here
+
+      var watchedModal = new bootstrap.Modal(document.getElementById('watchedModal'));
+    watchedModal.show();    //this is modal 
   }
+
+
+  //MODALS
+
+  document.getElementById('watchedYes').addEventListener('click', function() {
+    // Hide the first modal
+    $('#watchedModal').modal('hide');
+
+    // Show the second modal asking for the movie rating
+    var ratingModal = new bootstrap.Modal(document.getElementById('ratingModal'));
+    ratingModal.show();
+});
+
+//MODALS
+
+document.getElementById('thumbsUp').addEventListener('click', function() {
+    console.log('User liked the movie.');
+    // Here, implement the logic to store the response need to fix - nowhere to store
+    $('#ratingModal').modal('hide');
+});
+
+document.getElementById('thumbsDown').addEventListener('click', function() {
+    console.log('User disliked the movie.');
+    // Here, implement the logic to store the response need fixing- nowehere to store
+    $('#ratingModal').modal('hide');
+});
+
+
 
 
 
