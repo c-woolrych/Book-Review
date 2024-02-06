@@ -132,12 +132,14 @@ button:hover {
 }
 
 .movie-trailer-box {
-  width: 300px;
-  height: 300px;
+  width: 80%;
+  height: auto;
   background-color: var(--dark-color);
   color: white;
   padding: 20px;
+  margin: 20px auto;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .movie-info-section {
@@ -158,14 +160,22 @@ margin-top: 20px;
 }
 
 /* search history style */
+
+.search-history-card {
+  width: 80%;
+  height: auto;
+  box-sizing: border-box;
+  margin: 20px;
+}
+
   #searchHistory {
     background-color: var(--dark-color);
     color: white;
     padding: 20px;
     border: 1px solid var(--popcorn-color);
     border-radius: 5px;
-    margin: 20px auto;
-    max-width: 600px;
+    margin: 0;
+    box-sizing: border-box;
   }
 
 #searchHistory li {
@@ -181,6 +191,8 @@ margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
   margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #clear-storage-btn:hover {

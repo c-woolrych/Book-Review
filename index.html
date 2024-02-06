@@ -12,63 +12,71 @@
 
 </head>
 <body>
-      <!-- logo -->
-      <div class= "logo">
-        <div class = "logo-container">
-          <p>Popcorn<span>Perspectives</span></p>
-        </div>
+  <!-- logo -->
+  <div class="logo">
+    <div class="logo-container">
+      <p>Popcorn<span>Perspectives</span></p>
+    </div>
+  </div>
+  <!-- logo end -->
+  <!-- Search box -->
+  <div class="search-container">
+    <div class="search-input">
+      <p class="search-text">Watch trailers, view the cast, and read the synopsis of any TV show or movie</p>
+      <input type="text" class="search-control" placeholder="Search for a title" id="search-box">
+      <div class="search-button">
+        <button>Search</button>
       </div>
-      <!-- logo end -->
-      <!-- Search box -->
-      <div class="search-container">
-        <div class="search-input">
-          <p class="search-text">Watch trailers, view the cast, and read the synopsis of any TV show or movie</p>
-          <input type="text" class="search-control" placeholder="Search for a title" id="search-box">
-          <div class="search-button">
-            <button>Search</button>
-          </div>
-          <!--list-->
-        </div>
-      </div>
-      <div class="container mt-4">
-        <div class="row">
-          <div class="col-md-8">
-            <!-- Existing logo and search box -->
-            <!-- Movie Trailer Section -->
-            <div class="card">
-              <div class="card-body">
-                <h2 class="card-title">Movie Trailer</h2>
-                <div id="movie-trailer-container"></div>
-                  <div id ="movie-trailer-box"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-         <!-- New Movie Info Section -->
-         <div class="movie-info-section card">
+      <!--list-->
+    </div>
+  </div>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-8">
+        <!-- Existing logo and search box -->
+        <!-- Movie Trailer Section -->
+        <div class="card">
           <div class="card-body">
-            <h2 class="card-title">Selected Movie Information</h2>
-            <h5 class="card-title">Film Title</h5>
-            <p class="card-text"><strong>Plot:</strong> <span id="plot"></span></p>
-            <p class="card-text"><strong>Rating:</strong> <span id="rating"></span></p>
-            <p class="card-text"><strong>Released:</strong> <span id="releaseYear"></span></p>
-            <p class="card-text"><strong>Runtime:</strong> <span id="runTime"></span></p>
-            <p class="card-text"><strong>Genre:</strong> <span id="genre"></span></p>
-            <p class="card-text"><strong>Director:</strong> <span id="director"></span></p>
-            <p class="card-text"><strong>Actors:</strong> <span id="actors"></span></p>
+            <h2 class="card-title">Trailer</h2>
+            <div id="movie-trailer-container"></div>
+            <div id="movie-trailer-box"></div>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="col-md-6">
-          <h5>Search History</h5>
-          <ul id="searchHistory" class="list-group">
-            <!-- Search history items will be appended here -->
-          </ul>
-          <button id="clear-storage-btn" class="btn btn-danger mt-3">Clear Search History</button>
+          <!-- New Search History Section -->
+          <div class="card search-history-card">
+            <div class="card-body">
+              <h5 class="card-title">Search History</h5>
+              <ul id="searchHistory" class="list-group">
+                <!-- Search history items will be appended here -->
+              </ul>
+              <button id="clear-storage-btn" class="btn btn-danger mt-3">Clear Search History</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script src="filmreview.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    </body>
-    </html>
+    </div>
+    <!-- New Movie Info Section -->
+    <div class="movie-info-section card">
+      <div class="card-body">
+        <h2 class="card-title">Selected Movie Information</h2>
+        <h5 class="card-title">Film Title</h5>
+        <p class="card-text"><strong>Plot:</strong> <span id="plot"></span></p>
+        <p class="card-text"><strong>Rating:</strong> <span id="rating"></span></p>
+        <p class="card-text"><strong>Released:</strong> <span id="releaseYear"></span></p>
+        <p class="card-text"><strong>Runtime:</strong> <span id="runTime"></span></p>
+        <p class="card-text"><strong>Genre:</strong> <span id="genre"></span></p>
+        <p class="card-text"><strong>Director:</strong> <span id="director"></span></p>
+        <p class="card-text"><strong>Actors:</strong> <span id="actors"></span></p>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="filmreview.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>
