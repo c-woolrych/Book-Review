@@ -162,9 +162,7 @@ margin-top: 20px;
 /* search history style */
 
 .search-history-card {
-  width: 80%;
-  min-width: 500px;
-  min-height: 500px;
+  width: 100%;
   height: auto;
   box-sizing: border-box;
   margin: 20px auto;
@@ -204,39 +202,7 @@ margin-top: 20px;
   color: black;
 }
 
-
-@media only screen and (max-width: 1200px) {
-  .logo {
-    font-size: 1.5rem;
-  }
-
-  .search-container {
-    padding: 0.5rem;
-  }
-
-  .search-text {
-    font-size: 1.2rem;
-    margin: 0.3rem;
-  }
-
-  .search-control {
-    width: 100%;
-    margin-top: 0.3rem;
-  }
-
-  .search-control h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  button {
-    height: 2rem;
-    width: 100%;
-    font-size: 14px;
-    margin: 0.3rem 0;
-  }
-}
-
+/* MEDIA QUERIES */
 
 /* Mobile */
 @media only screen and (max-width: 600px) {
@@ -270,18 +236,64 @@ margin-top: 20px;
     font-size: 16px;
     margin: 0.5rem 0;
   }
+ 
+  #clear-storage-btn {
+    font-size: 14px;
+    padding: 8px 16px;
 }
+}
+
+
+/* Large screen */
+@media only screen and (max-width: 1200px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .search-container {
+    padding: 0.5rem;
+  }
+
+  .search-text {
+    font-size: 1.2rem;
+    margin: 0.3rem;
+  }
+
+  .search-control {
+    width: 100%;
+    margin-top: 0.3rem;
+  }
+
+  .search-control h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    height: 2rem;
+    width: 100%;
+    font-size: 14px;
+    margin: 0.3rem 0;
+  }
+}
+
 
 /* Tablet */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
+  #clear-storage-btn {
+    font-size: 15px;
+    padding: 10px 18px;
+  }
 }
 
 /* Desktop */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Add desktop-specific styles here */
+  #clear-storage-btn {
+    font-size: 18px;
+    padding: 12px 24px;
 }
-
 /* Laptop */
 @media only screen and (min-width: 1025px) {
   /* Add laptop-specific styles here */
+}
 }
