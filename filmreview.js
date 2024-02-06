@@ -7,9 +7,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateSearchHistoryUI() {
     searchHistoryContainer.innerHTML = searchHistory
-        .map(term => `<li class="list-group-item list-group-item-action">${term}</li>`)
+        .map(term => `<li class="list-group-item list-group-item-action">${term}
+        <button class="btn reviewBtn" id="green"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></button>
+        <button class="btn reviewBtn" id="red"><i class="fa fa-thumbs-down fa-lg" aria-hidden="true"></i></button>
+        </li>`)
         .join('');
+};
+
+window.onload = function () {
+
+var btn1 = document.querySelector('#green');
+var btn2 = document.querySelector('#red');
+
+btn1.addEventListener('click', function() {
+  
+    if (btn2.classList.contains('red')) {
+      btn2.classList.remove('red');
+    } 
+  this.classList.toggle('green');
+localStroage.setItem("like", "like");
+  
+});
+
+btn2.addEventListener('click', function() {
+  
+    if (btn1.classList.contains('green')) {
+      btn1.classList.remove('green');
+    } 
+  this.classList.toggle('red');
+localStroage.setItem("like", "dislike");
+
+  
+});
+if (localStorage.getItem("like") == "like") {
+document.getElementById('green').click()
 }
+else {
+    document.getElementById('red').click()
+}};
 
 searchHistoryContainer.addEventListener('click', function(event) {
   if (event.target && event.target.nodeName === "LI") {
