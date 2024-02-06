@@ -211,6 +211,57 @@ margin-top: 20px;
   text-decoration: none;
 }
 
+/* FOOTER */
+.footer-section {
+  background-color: rgb(88, 88, 88);
+  color: #fff; 
+  padding: 20px; 
+  text-align: center;
+}
+
+#footer section {
+  max-width: 600px; /* Adjust the max-width to your preference */
+  margin: 0 auto; /* Center the section within the footer */
+}
+
+h3 {
+  color: var(--popcorn-color); /* Set the color for the heading */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright-text {
+  margin: 10px;
+}
+ul.icons {
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+}
+
+ul.icons li {
+  display: inline-block; /* Display list items horizontally */
+  margin-right: 10px; /* Adjust the spacing between icons */
+}
+
+a.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 10%; /* Create rounded icons */
+  background-color: #fff; /* Set the background color for icons */
+  color: #333; /* Set the color for the icon */
+}
+
+/* Adjust styles for the GitHub icon */
+a.icon.fa-github {
+  background-color: #333; /* Set a specific background color for GitHub icon */
+  color: #fff; /* Set the color for the GitHub icon */
+}
+
 /* MEDIA QUERIES */
 
 /* Mobile */
