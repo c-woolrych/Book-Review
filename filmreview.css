@@ -163,9 +163,11 @@ margin-top: 20px;
 
 .search-history-card {
   width: 80%;
+  min-width: 500px;
+  min-height: 500px;
   height: auto;
   box-sizing: border-box;
-  margin: 20px;
+  margin: 20px auto;
 }
 
   #searchHistory {
@@ -191,12 +193,14 @@ margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
   margin-bottom: 20px;
-  width: 100%;
+  width: 40%;
   box-sizing: border-box;
+  transition: background-color 0.3s;
 }
 
 #clear-storage-btn:hover {
   background-color: var(--popcorn-color);
+  color: black;
 }
 
 
