@@ -1,4 +1,6 @@
+
  
+
 # Popcorn Perspectives: Film Review App Project 1
 
 ## Description
@@ -77,3 +79,5 @@ Refer to the LICENSE in the repo.
 [![Made with Visual Studio Code](https://img.shields.io/badge/Made%20with-Visual%20Studio%20Code-1f425f.svg)](https://code.visualstudio.com/)
 
 [![Deployed on GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-brightgreen)](https://pages.github.com/)
+
+

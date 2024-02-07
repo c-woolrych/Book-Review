@@ -11,14 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
         .join('');
 }
 
-
-
 searchHistoryContainer.addEventListener('click', function(event) {
   if (event.target && event.target.nodeName === "LI") {
       const searchTerm = event.target.textContent;
       fetchMovieData(searchTerm);
   }
 });
+
 
 
     function addToSearchHistory(searchTerm) {
@@ -29,8 +28,6 @@ searchHistoryContainer.addEventListener('click', function(event) {
           updateSearchHistoryUI();
       }
   }
-
-
 
   function displayMovieTrailer(movieTitle) {
 
@@ -56,6 +53,7 @@ function embedYoutubeVideo(videoId) {
     const playerContainer = document.getElementById('movie-trailer-container');
     playerContainer.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 }
+
 
 
     searchButton.addEventListener('click', function() {
@@ -86,19 +84,19 @@ function embedYoutubeVideo(videoId) {
             .catch(error => console.error('Error:', error));
     }
 
-    //ERROR Messages
+    //ERROR OPTIONS
 
     function handleNoMovieFound(searchTerm) {
         showErrorModal('Movie not found', `We could not find any movie matching "${searchTerm}". Please try another search.`);
         
-        // place here an image within the trailer container
+        // place here animage within the trailer container
         document.getElementById('movie-trailer-container').innerHTML = `<img src="assets/Images/AdobeStock_132886518.jpeg" alt="Movie not found" style="max-width: 100%; height: auto;">`;
       
         clearMovieInfo();
       }
 
 
-      //thumbs up icon button for error modal
+      //thumbs up icon button 
 
       function showErrorModal(title, message) {
         // title and message for the error modal
@@ -142,11 +140,13 @@ function embedYoutubeVideo(videoId) {
         document.getElementById('genre').textContent =  'Unavailable';
         document.getElementById('director').textContent = 'Unavailable';
         document.getElementById('actors').textContent = 'Unavailable';
+         
+        // Clear other fields as necessary
     }
 
 
 function displayMovieData(movie) {
-
+   
     document.getElementById('movieTitle').textContent = movie.Title || 'Title Unavailable';
     document.getElementById('plot').textContent = movie.Plot || 'Plot Unavailable';
     document.getElementById('rating').textContent = movie.imdbRating || 'Rating Unavailable';
@@ -173,7 +173,7 @@ function displayMovieData(movie) {
     ratingModal.show();
 });
 
-//2nd MODAL was here before 
+//2nd MODAL
 
 document.getElementById('thumbsUp').addEventListener('click', function() {
     console.log('User liked the movie.');
@@ -189,6 +189,9 @@ document.getElementById('thumbsDown').addEventListener('click', function() {
 
 
 
+
+
+
     // here is search history functionality
     const clearStorageBtn = document.getElementById('clear-storage-btn');
     clearStorageBtn.addEventListener('click', () => {
@@ -196,6 +199,7 @@ document.getElementById('thumbsDown').addEventListener('click', function() {
         searchHistory = [];
         updateSearchHistoryUI();
     });
+
 
 
     updateSearchHistoryUI();
