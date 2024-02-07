@@ -89,18 +89,46 @@ function embedYoutubeVideo(videoId) {
     function handleNoMovieFound(searchTerm) {
         showErrorModal('Movie not found', `We could not find any movie matching "${searchTerm}". Please try another search.`);
         
-        // place here an image within the trailer container
+        // place here animage within the trailer container
         document.getElementById('movie-trailer-container').innerHTML = `<img src="assets/Images/AdobeStock_132886518.jpeg" alt="Movie not found" style="max-width: 100%; height: auto;">`;
       
         clearMovieInfo();
       }
 
-    function showErrorModal(title, message) {
-        // Display error modal
+
+      //thumbs up icon button 
+
+      function showErrorModal(title, message) {
+        // title and message for the error modal
         document.getElementById('errorModalLabel').textContent = title;
         document.getElementById('errorModalBody').textContent = message;
+    
+        // modal's footer for modification
+        const modalFooter = document.querySelector('#errorModal .modal-footer');
+        
+        // add the thumbs up button
+        modalFooter.innerHTML = `
+            <button type="button" class="btn btn-light" id="errorModalThumbsUp" data-bs-dismiss="modal">
+                <i class="bi bi-hand-thumbs-up-fill"></i>
+            </button>
+        `;
+    
+        // any specific event listener can be added to the thumbs up button if necessary
+        document.getElementById('errorModalThumbsUp').addEventListener('click', () => {
+            console.log('Thumbs up clicked in error modal');
+        });
+    
+        // Show the modal
         $('#errorModal').modal('show');
     }
+    
+//OK button generic
+    // function showErrorModal(title, message) {
+    //     // Display error modal
+    //     document.getElementById('errorModalLabel').textContent = title;
+    //     document.getElementById('errorModalBody').textContent = message;
+    //     $('#errorModal').modal('show');
+    // }
 
     function clearMovieInfo() {
         // Clear movie information fields
