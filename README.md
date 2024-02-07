@@ -1,5 +1,4 @@
-# Book-Review
-This is my branch to work on the project independtly to avoid merging with other branches.
+# Movie trailer and info site
 Popcorn Perspectives: Film Review App Project 1
 Description
 Movie lovers may browse, view trailers, read outlines, and share their ratings of their favourite films with Popcorn Perspectives, an interactive front-end application. Through a simple and user-friendly interface, the app offers a rich database of movie information, trailers, and user interaction by utilising several server-side APIs. Popcorn Perspectives is an essential instrument for organising your upcoming movie night since it aims to improve movie discovery and engagement.
