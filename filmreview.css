@@ -225,17 +225,17 @@ margin-top: 20px;
 
 
 /*Icons Modals*/
-#ratingModal .btn-light .bi {
+#ratingModal .btn-light .bi, #errorModal .btn-light .bi {
   color: var(--popcorn-color);
 }
 
 /* thumbs up and thumbs down buttons in the modal */
-#thumbsUp, #thumbsDown {
+#thumbsUp, #thumbsDown, #errorModalThumbsUp{
   border-color: var(--popcorn-color);
 
 }
 
-#thumbsUp:hover, #thumbsDown:hover {
+#thumbsUp:hover, #thumbsDown:hover, #errorModalThumbsUp:hover {
   background-color: var(--dark-color); 
   color: var(--popcorn-color);
 }
