@@ -8,43 +8,64 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateSearchHistoryUI() {
     searchHistoryContainer.innerHTML = searchHistory
         .map(term => `<li class="list-group-item list-group-item-action">${term}
-        <button class="btn reviewBtn" id="green"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></button>
-        <button class="btn reviewBtn" id="red"><i class="fa fa-thumbs-down fa-lg" aria-hidden="true"></i></button>
+        <button class="btn reviewBtn" id="green"><i class="fa fa-thumbs-up fa-lg icon" aria-hidden="true"></i></button>
+        <button class="btn reviewBtn" id="red"><i class="fa fa-thumbs-down fa-lg icon" aria-hidden="true"></i></button>
         </li>`)
         .join('');
 };
 
-window.onload = function () {
+// $('.reviewBtn').on('click', function(event) {
+//     console.log('clicked');
+//     $(this).toggleClass('clicked');
+//     event.preventDefault();
+// });
 
-var btn1 = document.querySelector('#green');
-var btn2 = document.querySelector('#red');
+// $('.reviewBtn').click( function() {
+//     var btnStorage = $(this).attr('id');
+//     if($(this).hasClass("clicked")) {
+//         localStorage.setItem(btnStorage, 'true');
+//     } else {
+//         localStorage.removeItem(btnStorage, 'true');
+//     }
+// });
 
-btn1.addEventListener('click', function() {
-  
+// $('.reviewBtn').each(function() {
+//     var mainLocalStorage = $(this).attr('id');
+//     if(localStorage.getItem(mainLocalStorage) == 'true') {
+//         $(this).addClass('clicked');
+//     } else {
+//         $(this).removeClass('clicked');
+//     }
+// });
+
+// window.onload = function () {
+var btn1 = document.getElementById('#green');
+var btn2 = document.getElementById('#red');
+// var liked = JSON.parse(localStorage.getItem('liked')) || []; //???
+
+btn1.on('click', function() {
     if (btn2.classList.contains('red')) {
       btn2.classList.remove('red');
     } 
   this.classList.toggle('green');
-localStroage.setItem("like", "like");
-  
 });
+//   localStroage.setItem("liked", JSON.stringify(liked));
 
-btn2.addEventListener('click', function() {
-  
+btn2.on('click', function() {
     if (btn1.classList.contains('green')) {
       btn1.classList.remove('green');
     } 
   this.classList.toggle('red');
-localStroage.setItem("like", "dislike");
-
-  
+    // localStroage.setItem("dislike", JSON.stringify(liked));
 });
-if (localStorage.getItem("like") == "like") {
-document.getElementById('green').click()
+
+if (liked == "like") {
+    document.getElementById('green').click()
 }
-else {
+else if (liked == 'dislike') {
     document.getElementById('red').click()
-}};
+}
+// };
 
 searchHistoryContainer.addEventListener('click', function(event) {
   if (event.target && event.target.nodeName === "LI") {
