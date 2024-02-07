@@ -85,14 +85,18 @@ function embedYoutubeVideo(videoId) {
 
 
 
-  function displayMovieData(movie) {
-      document.getElementById('plot').textContent = movie.Plot || 'Plot Unavailable';
-      document.getElementById('rating').textContent = movie.imdbRating || 'Rating Unavailable';
-      document.getElementById('releaseYear').textContent = movie.Released || 'Release Date Unavailable';
-      document.getElementById('runTime').textContent = movie.Runtime || 'Runtime Unavailable';
-      document.getElementById('genre').textContent = movie.Genre || 'Genre Unavailable';
-      document.getElementById('director').textContent = movie.Director || 'Director Unavailable';
-      document.getElementById('actors').textContent = movie.Actors || 'Actors Unavailable';
+function displayMovieData(movie) {
+    // document.querySelector('.movie-info-section .card-title').textContent = movie.Title || 'Title Unavailable';
+    document.getElementById('movieTitle').textContent = movie.Title || 'Title Unavailable';
+    console.log(movie.Title)
+    
+    document.getElementById('plot').textContent = movie.Plot || 'Plot Unavailable';
+    document.getElementById('rating').textContent = movie.imdbRating || 'Rating Unavailable';
+    document.getElementById('releaseYear').textContent = movie.Released || 'Release Date Unavailable';
+    document.getElementById('runTime').textContent = movie.Runtime || 'Runtime Unavailable';
+    document.getElementById('genre').textContent = movie.Genre || 'Genre Unavailable';
+    document.getElementById('director').textContent = movie.Director || 'Director Unavailable';
+    document.getElementById('actors').textContent = movie.Actors || 'Actors Unavailable';
       // we can add any additional movie details here
 
       var watchedModal = new bootstrap.Modal(document.getElementById('watchedModal'));
@@ -100,7 +104,7 @@ function embedYoutubeVideo(videoId) {
   }
 
 
-  //MODALS
+  //1st MODAL
 
   document.getElementById('watchedYes').addEventListener('click', function() {
     // Hide the first modal
@@ -111,7 +115,7 @@ function embedYoutubeVideo(videoId) {
     ratingModal.show();
 });
 
-//MODALS
+//2nd MODAL
 
 document.getElementById('thumbsUp').addEventListener('click', function() {
     console.log('User liked the movie.');
