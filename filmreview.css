@@ -131,6 +131,13 @@ button:hover {
   min-height: 60vh;
 }
 
+#movie-trailer-container img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Centers the image if the container is wider */
+  margin: 0 auto; /* Additional centering for the image */
+}
+
 .movie-trailer-box {
   width: 80%;
   height: auto;
