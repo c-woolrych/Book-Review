@@ -78,18 +78,48 @@ function embedYoutubeVideo(videoId) {
                     displayMovieTrailer(data.Title); 
                 } else {
                     console.log('Movie not found');
+                    handleNoMovieFound(searchTerm); //if no movie is found
                 }
             })
             .catch(error => console.error('Error:', error));
     }
 
+    //ERROR OPTIONS
+
+    function handleNoMovieFound(searchTerm) {
+        showErrorModal('Movie not found', `We could not find any movie matching "${searchTerm}". Please try another search.`);
+        
+        // place here an image within the trailer container
+        document.getElementById('movie-trailer-container').innerHTML = `<img src="assets/Images/AdobeStock_132886518.jpeg" alt="Movie not found" style="max-width: 100%; height: auto;">`;
+      
+        clearMovieInfo();
+      }
+
+    function showErrorModal(title, message) {
+        // Display error modal
+        document.getElementById('errorModalLabel').textContent = title;
+        document.getElementById('errorModalBody').textContent = message;
+        $('#errorModal').modal('show');
+    }
+
+    function clearMovieInfo() {
+        // Clear movie information fields
+        document.getElementById('movieTitle').textContent = 'Unavailable';
+        document.getElementById('plot').textContent = 'Unavailable';
+        document.getElementById('rating').textContent = 'Unavailable';
+        document.getElementById('releaseYear').textContent = 'Unavailable';
+        document.getElementById('runTime').textContent =  'Unavailable';
+        document.getElementById('genre').textContent =  'Unavailable';
+        document.getElementById('director').textContent = 'Unavailable';
+        document.getElementById('actors').textContent = 'Unavailable';
+         
+        // Clear other fields as necessary
+    }
 
 
 function displayMovieData(movie) {
-    // document.querySelector('.movie-info-section .card-title').textContent = movie.Title || 'Title Unavailable';
+   
     document.getElementById('movieTitle').textContent = movie.Title || 'Title Unavailable';
-    console.log(movie.Title)
-    
     document.getElementById('plot').textContent = movie.Plot || 'Plot Unavailable';
     document.getElementById('rating').textContent = movie.imdbRating || 'Rating Unavailable';
     document.getElementById('releaseYear').textContent = movie.Released || 'Release Date Unavailable';
