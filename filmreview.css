@@ -159,6 +159,11 @@ margin-top: 20px;
   color: white;
 }
 
+#movieTitle {
+  color: var(--popcorn-color); 
+}
+
+
 /* search history style */
 
 .search-history-card {
