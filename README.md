@@ -18,8 +18,7 @@ To use Popcorn Perspectives, follow these steps:
 2. Select the desired movie from the auto-complete suggestions.
 3. Explore the movie details, including trailers, plots, cast, and ratings.
 4. Share your opinion by clicking the thumbs up or thumbs down button.
-5. ????Interact with the community by viewing and sharing ratings for other movies.
-6. Enjoy discovering new films and engaging with fellow movie enthusiasts!
+5. Enjoy discovering new films and engaging with fellow movie enthusiasts!
 ### Deployment
 This application is deployed at a live URL and is accessible for public use:
 [Link to the deployed Popcorn Perspectives Application](LINK HERE)
