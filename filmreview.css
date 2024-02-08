@@ -280,6 +280,7 @@ margin-top: 20px;
 .copyright {
   margin-top: 20px;
   display: flex;
+  cursor: none;
   align-items: center;
   justify-content: center;
   color: white;
@@ -348,7 +349,10 @@ margin-top: 20px;
   .search-text {
     font-size: 1.5rem;
     margin: 0.5rem;
+    padding: 20px;
   }
+
+  
 
   .search-control {
     width: 100%;
@@ -364,8 +368,14 @@ margin-top: 20px;
     height: 2.5rem;
     width: 100%;
     font-size: 16px;
-    margin: 0.5rem 0;
+    margin: 1rem 0;
   }
+
+  .search-button {
+    margin: 10px;
+    width: 20%;
+  }
+    
  
   #clear-storage-btn {
     font-size: 14px;
@@ -414,6 +424,12 @@ margin-top: 20px;
     font-size: 15px;
     padding: 10px 18px;
   }
+
+  .search-button {
+    margin: 10px;
+    width: 20%;
+  }
+    
 }
 
 /* Desktop */
@@ -422,11 +438,24 @@ margin-top: 20px;
     width: auto;
     font-size: 18px;
     padding: 12px 24px;
-}
+    }
+
+    .search-button {
+      width: 20%;
+    }
+      
 /* Laptop */
 @media only screen and (min-width: 1025px) {
   /* Add laptop-specific styles here */
 }
+.search-button {
+  margin: 10px;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
 }
 
 /* like/dislike buttons */
