@@ -21,10 +21,10 @@ To use Popcorn Perspectives, follow these steps:
 5. Enjoy discovering new films and engaging with fellow movie enthusiasts!
 ### Deployment
 This application is deployed at a live URL and is accessible for public use:
-[Link to the deployed Popcorn Perspectives Application](LINK HERE)
-![Screenshot of Popcorn Perspectives App](LINK HERE)
+[Link to the deployed Popcorn Perspectives Application](https://c-woolrych.github.io/Film-Review/)
+![Screenshot of Popcorn Perspectives App](week9-project1-part1\Film-Review\assets\Images\Screenshot (11).png)(week9-project1-part1\Film-Review\assets\Images\Screenshot (12).png)
 ### GitHub Repository
-[Link to the GitHub repository for the Popcorn Perspectives Application](LINK HERE)
+[Link to the GitHub repository for the Popcorn Perspectives Application](https://github.com/c-woolrych/Film-Review)
 ## Future Development
 Adding user accounts for personalized movie recommendations.
 Incorporating social sharing options to enhance community engagement.
