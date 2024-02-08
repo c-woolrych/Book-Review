@@ -70,6 +70,85 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error fetching YouTube data:', error));
   }
+
+
+
+  //1st MODAL
+
+  document.getElementById('watchedYes').addEventListener('click', function() {
+    // Hide the first modal
+    $('#watchedModal').modal('hide');
+
+    // Show the second modal asking for the movie rating
+    var ratingModal = new bootstrap.Modal(document.getElementById('ratingModal'));
+    ratingModal.show();
+});
+
+//2nd MODAL
+
+document.getElementById('thumbsUp').addEventListener('click', function() {
+    console.log('User liked the movie.');
+    // Here, implement the logic to store the response need to fix - nowhere to store
+    $('#ratingModal').modal('hide');
+});
+
+document.getElementById('thumbsDown').addEventListener('click', function() {
+    console.log('User disliked the movie.');
+    // Here, implement the logic to store the response need fixing- nowehere to store
+    $('#ratingModal').modal('hide');
+});
+
+
+
+    // here is search history functionality
+    const clearStorageBtn = document.getElementById('clear-storage-btn');
+    clearStorageBtn.addEventListener('click', () => {
+        localStorage.clear();
+        searchHistory = [];
+        updateSearchHistoryUI();
+    });
+
+
+
+    updateSearchHistoryUI();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// console.log('js is loaded');
+
+// function showRatingModal() {
+//     console.log("showRatingModal called");
+//     $('#watchedMovieModal').modal('hide'); // Hide the first modal fixed
+//     $('#ratingModal').modal('show'); // Show the rating modal dfixed and animated
+//   }
+
   
   function embedYoutubeVideo(videoId) {
      
@@ -223,7 +302,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
   
       updateSearchHistoryUI();
-  });
+});
+
   
   
   
