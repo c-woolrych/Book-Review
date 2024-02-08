@@ -14,58 +14,20 @@ document.addEventListener('DOMContentLoaded', () => {
         .join('');
 };
 
-// $('.reviewBtn').on('click', function(event) {
-//     console.log('clicked');
-//     $(this).toggleClass('clicked');
-//     event.preventDefault();
-// });
-
-// $('.reviewBtn').click( function() {
-//     var btnStorage = $(this).attr('id');
-//     if($(this).hasClass("clicked")) {
-//         localStorage.setItem(btnStorage, 'true');
-//     } else {
-//         localStorage.removeItem(btnStorage, 'true');
-//     }
-// });
-
-// $('.reviewBtn').each(function() {
-//     var mainLocalStorage = $(this).attr('id');
-//     if(localStorage.getItem(mainLocalStorage) == 'true') {
-//         $(this).addClass('clicked');
-//     } else {
-//         $(this).removeClass('clicked');
-//     }
-// });
-
-// window.onload = function () {
-var btn1 = document.getElementById('#green');
-var btn2 = document.getElementById('#red');
-// var liked = JSON.parse(localStorage.getItem('liked')) || []; //???
-
-btn1.on('click', function() {
-    if (btn2.classList.contains('red')) {
-      btn2.classList.remove('red');
-    } 
-  this.classList.toggle('green');
-});
-//   localStroage.setItem("liked", JSON.stringify(liked));
-
-btn2.on('click', function() {
-    if (btn1.classList.contains('green')) {
-      btn1.classList.remove('green');
-    } 
-  this.classList.toggle('red');
-    // localStroage.setItem("dislike", JSON.stringify(liked));
-});
-
-if (liked == "like") {
-    document.getElementById('green').click()
-}
-else if (liked == 'dislike') {
-    document.getElementById('red').click()
-}
-// };
+const btn1 = document.querySelector('#green');
+const btn2 = document.querySelector('#red');
+// Attach the event listener to a parent element
+searchHistoryContainer.addEventListener('click', (event) => {
+    const target = event.target;
+    // Check if the clicked element has the ID 'green'
+    if (target.id === 'green') {
+      console.log('Green button clicked');
+      target.classList.add('green');
+    } else if (target.id === 'red') {
+      console.log('red button clicked');
+        target.classList.add('red');
+    }
+  });
 
 searchHistoryContainer.addEventListener('click', function(event) {
   if (event.target && event.target.nodeName === "LI") {

@@ -331,7 +331,7 @@ margin-top: 20px;
 /* like/dislike buttons */
 .reviewBtn{
   margin: 0.3rem;
-  width: 0.6rem;
+  width: 1.5rem;
   height: 1.5rem;
 }
 
@@ -340,6 +340,9 @@ margin-top: 20px;
   outline: 0;
   color: #AAA;
 
+}
+.btn:focus {
+  outline: none;
 }
 
 .green{
