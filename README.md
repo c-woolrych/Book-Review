@@ -18,14 +18,14 @@ To use Popcorn Perspectives, follow these steps:
 2. Select the desired movie from the auto-complete suggestions.
 3. Explore the movie details, including trailers, plots, cast, and ratings.
 4. Share your opinion by clicking the thumbs up or thumbs down button.
-5. ????Interact with the community by viewing and sharing ratings for other movies.
-6. Enjoy discovering new films and engaging with fellow movie enthusiasts!
+5. Enjoy discovering new films and engaging with fellow movie enthusiasts!
 ### Deployment
 This application is deployed at a live URL and is accessible for public use:
-[Link to the deployed Popcorn Perspectives Application](LINK HERE)
-![Screenshot of Popcorn Perspectives App](LINK HERE)
+[Link to the deployed Popcorn Perspectives Application](https://c-woolrych.github.io/Film-Review/)
+![Screenshot of Popcorn Perspectives App](./assets/Images/Screenshot(11).png)
+![screenshot of app](./assets/Images/Screenshot(12).png)
 ### GitHub Repository
-[Link to the GitHub repository for the Popcorn Perspectives Application](LINK HERE)
+[Link to the GitHub repository for the Popcorn Perspectives Application](https://github.com/c-woolrych/Film-Review)
 ## Future Development
 Adding user accounts for personalized movie recommendations.
 Incorporating social sharing options to enhance community engagement.
@@ -33,6 +33,7 @@ Expanding the database to include TV shows and user-generated content.
 ## Credits
 The following resources were instrumental in this project’s completion:
 Photos:
+[Popcorn Photo](https://www.pexels.com/photo/orange-corn-kernels-60507/)
 [Bootstrap v5.3.0-alpha3. Bootstrap’slibrary](https://getbootstrap.com)
 [Coding Boot Camp](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 [jQuery API Documentation](https://api.jquery.com)
