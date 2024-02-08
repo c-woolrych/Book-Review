@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateSearchHistoryUI() {
       searchHistoryContainer.innerHTML = searchHistory
           .map(term => `<li class="list-group-item list-group-item-action">${term}
-          <button class="btn reviewBtn" id="green"><i class="fa fa-thumbs-up fa-lg icon" aria-hidden="true"></i></button>
-          <button class="btn reviewBtn" id="red"><i class="fa fa-thumbs-down fa-lg icon" aria-hidden="true"></i></button>
+          <button class="btn reviewBtn"><i id="green" class="fa fa-thumbs-up fa-lg icon" aria-hidden="true"></i></button>
+          <button class="btn reviewBtn"><i id="red" class="fa fa-thumbs-down fa-lg icon" aria-hidden="true"></i></button>
           </li>`)
           .join('');
   };
