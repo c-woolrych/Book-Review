@@ -413,3 +413,28 @@ margin-top: 20px;
   /* Add laptop-specific styles here */
 }
 }
+
+/* like/dislike buttons */
+.reviewBtn{
+  margin: 0.3rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.reviewBtn{
+  cursor: pointer;
+  outline: 0;
+  color: #AAA;
+
+}
+.btn:focus {
+  outline: none;
+}
+
+.green{
+  color: green;
+}
+
+.red{
+  color: red;
+}

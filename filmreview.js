@@ -7,9 +7,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateSearchHistoryUI() {
     searchHistoryContainer.innerHTML = searchHistory
-        .map(term => `<li class="list-group-item list-group-item-action">${term}</li>`)
+        .map(term => `<li class="list-group-item list-group-item-action">${term}
+        <button class="btn reviewBtn" id="green"><i class="fa fa-thumbs-up fa-lg icon" aria-hidden="true"></i></button>
+        <button class="btn reviewBtn" id="red"><i class="fa fa-thumbs-down fa-lg icon" aria-hidden="true"></i></button>
+        </li>`)
         .join('');
-}
+};
+
+const btn1 = document.querySelector('#green');
+const btn2 = document.querySelector('#red');
+// Attach the event listener to a parent element
+searchHistoryContainer.addEventListener('click', (event) => {
+    const target = event.target;
+    // Check if the clicked element has the ID 'green'
+    if (target.id === 'green') {
+      console.log('Green button clicked');
+      target.classList.add('green');
+    } else if (target.id === 'red') {
+      console.log('red button clicked');
+        target.classList.add('red');
+    }
+  });
 
 searchHistoryContainer.addEventListener('click', function(event) {
   if (event.target && event.target.nodeName === "LI") {
