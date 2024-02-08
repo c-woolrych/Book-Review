@@ -7,10 +7,31 @@ document.addEventListener('DOMContentLoaded', () => {
   
     function updateSearchHistoryUI() {
       searchHistoryContainer.innerHTML = searchHistory
-          .map(term => `<li class="list-group-item list-group-item-action">${term}</li>`)
+          .map(term => `<li class="list-group-item list-group-item-action">${term}
+          <button class="btn reviewBtn" id="green"><i class="fa fa-thumbs-up fa-lg icon" aria-hidden="true"></i></button>
+          <button class="btn reviewBtn" id="red"><i class="fa fa-thumbs-down fa-lg icon" aria-hidden="true"></i></button>
+          </li>`)
           .join('');
-  }
+  };
   
+  
+  // Attach the event listener to a parent element
+  searchHistoryContainer.addEventListener('click', (event) => {
+      const btn1 = document.querySelector('#green');
+      const btn2 = document.querySelector('#red');
+      const target = event.target;
+      // Check if the clicked element has the ID 'green'
+      if (target.id === 'green') {
+        console.log('Green button clicked');
+        target.classList.add('green');
+        btn2.classList.remove('red');
+      }
+      if (target.id === 'red') {
+        console.log('red button clicked');
+          target.classList.add('red');
+          btn1.classList.remove('green');
+      }
+    });
   
   
   searchHistoryContainer.addEventListener('click', function(event) {
@@ -21,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
   
+  
       function addToSearchHistory(searchTerm) {
         if (!searchHistory.includes(searchTerm)) {
             searchHistory.unshift(searchTerm);
@@ -29,8 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
             updateSearchHistoryUI();
         }
     }
-  
-  
   
     function displayMovieTrailer(movieTitle) {
   
@@ -56,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const playerContainer = document.getElementById('movie-trailer-container');
       playerContainer.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
   }
+  
   
   
       searchButton.addEventListener('click', function() {
@@ -86,19 +107,19 @@ document.addEventListener('DOMContentLoaded', () => {
               .catch(error => console.error('Error:', error));
       }
   
-      //ERROR Messages
+      //ERROR OPTIONS
   
       function handleNoMovieFound(searchTerm) {
           showErrorModal('Movie not found', `We could not find any movie matching "${searchTerm}". Please try another search.`);
           
-          // place here an image within the trailer container
+          // place here animage within the trailer container
           document.getElementById('movie-trailer-container').innerHTML = `<img src="assets/Images/AdobeStock_132886518.jpeg" alt="Movie not found" style="max-width: 100%; height: auto;">`;
         
           clearMovieInfo();
         }
   
   
-        //thumbs up icon button for error modal
+        //thumbs up icon button 
   
         function showErrorModal(title, message) {
           // title and message for the error modal
@@ -142,11 +163,13 @@ document.addEventListener('DOMContentLoaded', () => {
           document.getElementById('genre').textContent =  'Unavailable';
           document.getElementById('director').textContent = 'Unavailable';
           document.getElementById('actors').textContent = 'Unavailable';
+           
+          // Clear other fields as necessary
       }
   
   
   function displayMovieData(movie) {
-  
+     
       document.getElementById('movieTitle').textContent = movie.Title || 'Title Unavailable';
       document.getElementById('plot').textContent = movie.Plot || 'Plot Unavailable';
       document.getElementById('rating').textContent = movie.imdbRating || 'Rating Unavailable';
@@ -173,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ratingModal.show();
   });
   
-  //2nd MODAL was here before 
+  //2nd MODAL
   
   document.getElementById('thumbsUp').addEventListener('click', function() {
       console.log('User liked the movie.');
@@ -198,8 +221,37 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   
   
+  
       updateSearchHistoryUI();
   });
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   // console.log('js is loaded');
   

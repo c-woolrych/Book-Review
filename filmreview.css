@@ -31,11 +31,11 @@ body {
 }
 
 .search-container {
-  height: 180px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(88, 88, 88);
+  background-color: var(--dark-color);
 }
 
 .logo {
@@ -62,6 +62,7 @@ body {
   box-shadow: 0.1em 0.1em 0.1em rgba(16, 16, 16, 0.1);
   background-color: var(--dark-color);
   border-radius: 5px;
+  border: solid 1px;
 }
 
 #search-box {
@@ -69,6 +70,7 @@ body {
   font-family: 'Heebo', sans-serif;
   font-size: 24px;
   height: fit-content;
+  border: solid 1px;
 }
 
 .search-input {
@@ -78,14 +80,13 @@ body {
 }
 
 ::placeholder {
-  color: var(--popcorn-light-color);
+  color: var(--popcorn-color);
 }
 
 .search-control input {
   height: 50px;
   font-size: 1rem; 
   text-align: center;
-  border: none;
   background-color: var(--light-color);
   color: var(--dark-color);
 }
@@ -100,22 +101,22 @@ body {
 }
 
 button {
-  margin: 1.2rem;
+  margin: 1.2rem ;
   height: 3rem;
   width: 7rem;
   font-size: 20px;
-  color: var(--dark-color);
-  background-color: var(--light-color);
-  border: none;
+  color: var(--popcorn-color);
+  background-color: var(--dark-color);
+  border: solid 1px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease 0s;
   align-items: center;
   border-radius: 5px;
-
 }
 
 button:hover {
   background-color: var(--popcorn-color);
+  color: var(--dark-color);
 }
 
 #movie-trailer {
@@ -128,7 +129,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 60vh;
+  min-height: 50vh;
 }
 
 #movie-trailer-container img {
@@ -298,12 +299,26 @@ margin-top: 20px;
 }
 
 
-/*Icons Modals*/
+/*Icons and buttons in the Modals*/
+
+
+.btn-primary, .btn-secondary {
+  color: var(--popcorn-color);
+  background: white;
+  border-color: var(--popcorn-color);
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  background-color: var(--dark-color); 
+  color: var(--popcorn-color);
+  border-color: var(--popcorn-color);
+}
+
 #ratingModal .btn-light .bi, #errorModal .btn-light .bi {
   color: var(--popcorn-color);
 }
 
-/* thumbs up and thumbs down buttons in the modal */
+
 #thumbsUp, #thumbsDown, #errorModalThumbsUp{
   border-color: var(--popcorn-color);
 
@@ -412,4 +427,29 @@ margin-top: 20px;
 @media only screen and (min-width: 1025px) {
   /* Add laptop-specific styles here */
 }
+}
+
+/* like/dislike buttons */
+.reviewBtn{
+  margin: 0.3rem;
+  width: 3rem;
+  height: 2rem;
+}
+
+.reviewBtn{
+  cursor: pointer;
+  outline: 0;
+  color: #AAA;
+
+}
+.btn:focus {
+  outline: none;
+}
+
+.green{
+  color: green;
+}
+
+.red{
+  color: red;
 }
