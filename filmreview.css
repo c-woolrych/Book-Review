@@ -373,7 +373,10 @@ margin-top: 20px;
 
   .search-button {
     margin: 10px;
-    width: 20%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
     
  
@@ -395,7 +398,7 @@ margin-top: 20px;
   }
 
   .search-text {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin: 0.3rem;
   }
 
@@ -411,9 +414,13 @@ margin-top: 20px;
 
   button {
     height: 2rem;
-    width: 100%;
+    width: 60%;
     font-size: 14px;
-    margin: 0.3rem 0;
+    margin: 0.2rem;
+  }
+
+  .search-text{ 
+    font-size: 1.5rem;
   }
 }
 
@@ -426,10 +433,15 @@ margin-top: 20px;
   }
 
   .search-button {
-    margin: 10px;
+    margin: 5px;
     width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-    
+  .search-text{ 
+    font-size: 1.5rem;
+  }
 }
 
 /* Desktop */
@@ -449,12 +461,17 @@ margin-top: 20px;
   /* Add laptop-specific styles here */
 }
 .search-button {
-  margin: 10px;
+  margin: 5px;
   width: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.search-text { 
+  font-size: 1.8rem;
+}
+
   
 }
 
