@@ -14,14 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
           </li>`)
           .join('');
   };
-  
-  
+
   
   // Attach the event listener to a parent element
   searchHistoryContainer.addEventListener('click', (event) => {
       const btn1 = document.querySelector('#green');
       const btn2 = document.querySelector('#red');
       const target = event.target;
+        
       // Check if the clicked element has the ID 'green'
       if (target.id === 'green') {
         console.log('Green button clicked');
