@@ -40,8 +40,7 @@ Photos:
 [OMDb API The Open Movie Database](http://www.omdbapi.com)
 [YouTube Data API v3](https://developers.google.com/youtube/v3/docs/?apix=true)
 ## License
-Refer to the LICENSE in the repo.
+MIT 
 ## Badges
 [![Made with Visual Studio Code](https://img.shields.io/badge/Made%20with-Visual%20Studio%20Code-1f425f.svg)](https://code.visualstudio.com/)
 [![Deployed on GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-brightgreen)](https://pages.github.com/)
-
