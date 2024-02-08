@@ -33,6 +33,7 @@ Expanding the database to include TV shows and user-generated content.
 ## Credits
 The following resources were instrumental in this project’s completion:
 Photos:
+[https://www.pexels.com/photo/orange-corn-kernels-60507/]
 [Bootstrap v5.3.0-alpha3. Bootstrap’slibrary](https://getbootstrap.com)
 [Coding Boot Camp](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 [jQuery API Documentation](https://api.jquery.com)
