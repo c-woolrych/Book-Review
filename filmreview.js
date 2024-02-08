@@ -96,21 +96,83 @@ function embedYoutubeVideo(videoId) {
                     displayMovieTrailer(data.Title); 
                 } else {
                     console.log('Movie not found');
+                    handleNoMovieFound(searchTerm); //if no movie is found
                 }
             })
             .catch(error => console.error('Error:', error));
     }
 
+    //ERROR OPTIONS
+
+    function handleNoMovieFound(searchTerm) {
+        showErrorModal('Movie not found', `We could not find any movie matching "${searchTerm}". Please try another search.`);
+        
+        // place here animage within the trailer container
+        document.getElementById('movie-trailer-container').innerHTML = `<img src="assets/Images/AdobeStock_132886518.jpeg" alt="Movie not found" style="max-width: 100%; height: auto;">`;
+      
+        clearMovieInfo();
+      }
 
 
-  function displayMovieData(movie) {
-      document.getElementById('plot').textContent = movie.Plot || 'Plot Unavailable';
-      document.getElementById('rating').textContent = movie.imdbRating || 'Rating Unavailable';
-      document.getElementById('releaseYear').textContent = movie.Released || 'Release Date Unavailable';
-      document.getElementById('runTime').textContent = movie.Runtime || 'Runtime Unavailable';
-      document.getElementById('genre').textContent = movie.Genre || 'Genre Unavailable';
-      document.getElementById('director').textContent = movie.Director || 'Director Unavailable';
-      document.getElementById('actors').textContent = movie.Actors || 'Actors Unavailable';
+      //thumbs up icon button 
+
+      function showErrorModal(title, message) {
+        // title and message for the error modal
+        document.getElementById('errorModalLabel').textContent = title;
+        document.getElementById('errorModalBody').textContent = message;
+    
+        // modal's footer for modification
+        const modalFooter = document.querySelector('#errorModal .modal-footer');
+        
+        // add the thumbs up button
+        modalFooter.innerHTML = `
+            <button type="button" class="btn btn-light" id="errorModalThumbsUp" data-bs-dismiss="modal">
+                <i class="bi bi-hand-thumbs-up-fill"></i>
+            </button>
+        `;
+    
+        // any specific event listener can be added to the thumbs up button if necessary
+        document.getElementById('errorModalThumbsUp').addEventListener('click', () => {
+            console.log('Thumbs up clicked in error modal');
+        });
+    
+        // Show the modal
+        $('#errorModal').modal('show');
+    }
+    
+//OK button generic
+    // function showErrorModal(title, message) {
+    //     // Display error modal
+    //     document.getElementById('errorModalLabel').textContent = title;
+    //     document.getElementById('errorModalBody').textContent = message;
+    //     $('#errorModal').modal('show');
+    // }
+
+    function clearMovieInfo() {
+        // Clear movie information fields
+        document.getElementById('movieTitle').textContent = 'Unavailable';
+        document.getElementById('plot').textContent = 'Unavailable';
+        document.getElementById('rating').textContent = 'Unavailable';
+        document.getElementById('releaseYear').textContent = 'Unavailable';
+        document.getElementById('runTime').textContent =  'Unavailable';
+        document.getElementById('genre').textContent =  'Unavailable';
+        document.getElementById('director').textContent = 'Unavailable';
+        document.getElementById('actors').textContent = 'Unavailable';
+         
+        // Clear other fields as necessary
+    }
+
+
+function displayMovieData(movie) {
+   
+    document.getElementById('movieTitle').textContent = movie.Title || 'Title Unavailable';
+    document.getElementById('plot').textContent = movie.Plot || 'Plot Unavailable';
+    document.getElementById('rating').textContent = movie.imdbRating || 'Rating Unavailable';
+    document.getElementById('releaseYear').textContent = movie.Released || 'Release Date Unavailable';
+    document.getElementById('runTime').textContent = movie.Runtime || 'Runtime Unavailable';
+    document.getElementById('genre').textContent = movie.Genre || 'Genre Unavailable';
+    document.getElementById('director').textContent = movie.Director || 'Director Unavailable';
+    document.getElementById('actors').textContent = movie.Actors || 'Actors Unavailable';
       // we can add any additional movie details here
 
       var watchedModal = new bootstrap.Modal(document.getElementById('watchedModal'));
@@ -118,7 +180,7 @@ function embedYoutubeVideo(videoId) {
   }
 
 
-  //MODALS
+  //1st MODAL
 
   document.getElementById('watchedYes').addEventListener('click', function() {
     // Hide the first modal
@@ -129,7 +191,7 @@ function embedYoutubeVideo(videoId) {
     ratingModal.show();
 });
 
-//MODALS
+//2nd MODAL
 
 document.getElementById('thumbsUp').addEventListener('click', function() {
     console.log('User liked the movie.');
@@ -160,6 +222,34 @@ document.getElementById('thumbsDown').addEventListener('click', function() {
 
     updateSearchHistoryUI();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // console.log('js is loaded');
 
