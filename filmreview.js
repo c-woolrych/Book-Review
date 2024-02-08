@@ -212,9 +212,6 @@ document.getElementById('thumbsDown').addEventListener('click', function() {
 
 
 
-
-
-
     // here is search history functionality
     const clearStorageBtn = document.getElementById('clear-storage-btn');
     clearStorageBtn.addEventListener('click', () => {

@@ -298,12 +298,26 @@ margin-top: 20px;
 }
 
 
-/*Icons Modals*/
+/*Icons and buttons in the Modals*/
+
+
+.btn-primary, .btn-secondary {
+  color: var(--popcorn-color);
+  background: white;
+  border-color: var(--popcorn-color);
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  background-color: var(--dark-color); 
+  color: var(--popcorn-color);
+  border-color: var(--popcorn-color);
+}
+
 #ratingModal .btn-light .bi, #errorModal .btn-light .bi {
   color: var(--popcorn-color);
 }
 
-/* thumbs up and thumbs down buttons in the modal */
+
 #thumbsUp, #thumbsDown, #errorModalThumbsUp{
   border-color: var(--popcorn-color);
 
