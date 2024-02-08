@@ -22,8 +22,8 @@ To use Popcorn Perspectives, follow these steps:
 ### Deployment
 This application is deployed at a live URL and is accessible for public use:
 [Link to the deployed Popcorn Perspectives Application](https://c-woolrych.github.io/Film-Review/)
-![Screenshot of Popcorn Perspectives App](week9-project1-part1\Film-Review\assets\Images\Screenshot(11).png)
-![screenshot of app](week9-project1-part1\Film-Review\assets\Images\Screenshot(12).png)
+![Screenshot of Popcorn Perspectives App](assets\Images\Screenshot(11).png)
+![screenshot of app](assets\Images\Screenshot(12).png)
 ### GitHub Repository
 [Link to the GitHub repository for the Popcorn Perspectives Application](https://github.com/c-woolrych/Film-Review)
 ## Future Development
@@ -33,7 +33,7 @@ Expanding the database to include TV shows and user-generated content.
 ## Credits
 The following resources were instrumental in this project’s completion:
 Photos:
-[https://www.pexels.com/photo/orange-corn-kernels-60507/]
+[Popcorn Photo](https://www.pexels.com/photo/orange-corn-kernels-60507/)
 [Bootstrap v5.3.0-alpha3. Bootstrap’slibrary](https://getbootstrap.com)
 [Coding Boot Camp](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 [jQuery API Documentation](https://api.jquery.com)
